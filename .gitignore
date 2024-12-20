@@ -1,0 +1,5 @@
+*/data/text/*
+*/data/audio/*
+*.mp3
+*.txt
+keys/*.json
