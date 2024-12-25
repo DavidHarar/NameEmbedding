@@ -3,3 +3,7 @@
 *.mp3
 *.txt
 keys/*.json
+*/experiments/*
+*.pyc
+*__pycache__*
+*model_folder*
