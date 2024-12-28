@@ -1,0 +1,44 @@
+2024-12-27 23:24:22,266 - INFO - Starting experiment 3
+2024-12-27 23:24:22,266 - INFO - Experiment location: ./experiments/experiment_3
+2024-12-27 23:24:22,266 - INFO - Setting up the tokenizer
+2024-12-27 23:24:22,272 - INFO - Training new tokenizer
+2024-12-27 23:24:22,332 - INFO - Initializing the model
+2024-12-27 23:24:22,664 - INFO - Preparing datasets
+2024-12-27 23:24:24,020 - INFO - Starting training
+2024-12-27 23:24:29,615 - INFO - loss: 6.1726
+2024-12-27 23:24:29,615 - INFO - grad_norm: 3.137204647064209
+2024-12-27 23:24:29,615 - INFO - learning_rate: 0.0005
+2024-12-27 23:24:29,615 - INFO - epoch: 1.0
+2024-12-27 23:24:31,276 - INFO - eval_loss: 8.887925148010254
+2024-12-27 23:24:31,276 - INFO - eval_runtime: 1.6606
+2024-12-27 23:24:31,276 - INFO - eval_samples_per_second: 6022.039
+2024-12-27 23:24:31,276 - INFO - eval_steps_per_second: 188.49
+2024-12-27 23:24:31,276 - INFO - epoch: 1.0
+2024-12-27 23:24:31,277 - INFO - Evaluation Metric - eval_loss: 8.887925148010254
+2024-12-27 23:24:31,277 - INFO - Evaluation Metric - eval_runtime: 1.6606
+2024-12-27 23:24:31,277 - INFO - Evaluation Metric - eval_samples_per_second: 6022.039
+2024-12-27 23:24:31,277 - INFO - Evaluation Metric - eval_steps_per_second: 188.49
+2024-12-27 23:24:31,277 - INFO - Evaluation Metric - epoch: 1.0
+2024-12-27 23:24:35,237 - INFO - loss: 4.2775
+2024-12-27 23:24:35,237 - INFO - grad_norm: 1.763563632965088
+2024-12-27 23:24:35,237 - INFO - learning_rate: 0.0
+2024-12-27 23:24:35,237 - INFO - epoch: 2.0
+2024-12-27 23:24:37,167 - INFO - eval_loss: 8.778765678405762
+2024-12-27 23:24:37,168 - INFO - eval_runtime: 1.6626
+2024-12-27 23:24:37,168 - INFO - eval_samples_per_second: 6014.524
+2024-12-27 23:24:37,168 - INFO - eval_steps_per_second: 188.255
+2024-12-27 23:24:37,168 - INFO - epoch: 2.0
+2024-12-27 23:24:37,168 - INFO - Evaluation Metric - eval_loss: 8.778765678405762
+2024-12-27 23:24:37,168 - INFO - Evaluation Metric - eval_runtime: 1.6626
+2024-12-27 23:24:37,168 - INFO - Evaluation Metric - eval_samples_per_second: 6014.524
+2024-12-27 23:24:37,168 - INFO - Evaluation Metric - eval_steps_per_second: 188.255
+2024-12-27 23:24:37,168 - INFO - Evaluation Metric - epoch: 2.0
+2024-12-27 23:24:37,169 - INFO - train_runtime: 12.0998
+2024-12-27 23:24:37,169 - INFO - train_samples_per_second: 1652.924
+2024-12-27 23:24:37,169 - INFO - train_steps_per_second: 3.306
+2024-12-27 23:24:37,169 - INFO - total_flos: 53187868800000.0
+2024-12-27 23:24:37,169 - INFO - train_loss: 5.225064468383789
+2024-12-27 23:24:37,169 - INFO - epoch: 2.0
+2024-12-27 23:24:37,170 - INFO - Training completed at epoch 2.0
+2024-12-27 23:24:37,170 - INFO - Final training loss: None
+2024-12-27 23:24:37,171 - INFO - Training complete. Saving model.

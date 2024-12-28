@@ -8,25 +8,8 @@ from src.model import model_factory
 from src.tokenizer import BPE_Based_Tokenizer
 from src.dataset import CustomDataset
 from src.post_modeling_analysis import PostModelingReport
-
-def setup_logger(log_folder):
-    """
-    Sets up the logger to save logs to the specified log folder.
-    """
-    os.makedirs(log_folder, exist_ok=True)
-    log_file = os.path.join(log_folder, "experiment.log")
-    logging.basicConfig(
-        filename=log_file,
-        filemode="w",
-        level=logging.INFO,
-        format="%(asctime)s - %(levelname)s - %(message)s"
-    )
-    logger = logging.getLogger()
-    console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.INFO)
-    console_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
-    logger.addHandler(console_handler)
-    return logger
+from torch.utils.data import WeightedRandomSampler, DataLoader
+import pandas as pd
 
 
 class LoggingCallback(TrainerCallback):
@@ -48,7 +31,7 @@ class LoggingCallback(TrainerCallback):
                              f"Training loss: {training_loss} "
                              f"Eval loss: {eval_loss}")
 
-    def on_evaluate(self, args, state, control, metrics=None, **kwargs):
+    def on_evaluate(self, args, state, control, metrics='loss', **kwargs):
         # Log metrics after evaluation
         if metrics:
             for key, value in metrics.items():
@@ -60,17 +43,28 @@ class LoggingCallback(TrainerCallback):
         self.logger.info(f"Final training loss: {state.best_metric if hasattr(state, 'best_metric') else 'N/A'}")
 
 
-def pipeline(general_config, tokenizer_config, model_config, train_config):
+def pipeline(general_config, tokenizer_config, model_config, train_config, n=None):
     
     # -------------------
     # Setup
     # -------------------
     # load data
-    with open(general_config.get("training_set_path"), "r") as file:
-        training_names_txt = [line.strip() for line in file]
-    with open(general_config.get("validation_set_path"), "r") as file:
-        validation_names_txt = [line.strip() for line in file]
-    
+    if general_config.get("training_set_path").endswith(".txt"):
+        with open(general_config.get("training_set_path"), "r") as file:
+            training_names_txt = [line.strip() for line in file]
+        with open(general_config.get("validation_set_path"), "r") as file:
+            validation_names_txt = [line.strip() for line in file]
+    else:
+        training_df = pd.read_csv(general_config.get("training_set_path"))
+        validation_df = pd.read_csv(general_config.get("validation_set_path"))
+        
+        if n:
+            training_df = training_df.iloc[:n]
+            validation_df = validation_df.iloc[1:(n+1)]
+        
+        training_names_txt = training_df['name'].tolist()
+        validation_names_txt = validation_df['name'].tolist()
+
     # create a new experiment folder
     experiment_location, experiment_index = initiate_new_experiment(general_config.get('experiments_folder'))
     log_folder = os.path.join("logs", "training_logs", f"experiment_{experiment_index}")

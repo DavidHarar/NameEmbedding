@@ -1,0 +1,36 @@
+2024-12-27 23:27:05,593 - INFO - Starting experiment 4
+2024-12-27 23:27:05,593 - INFO - Experiment location: ./experiments/experiment_4
+2024-12-27 23:27:05,593 - INFO - Setting up the tokenizer
+2024-12-27 23:27:05,593 - INFO - Training new tokenizer
+2024-12-27 23:27:05,609 - INFO - Initializing the model
+2024-12-27 23:27:05,888 - INFO - Preparing datasets
+2024-12-27 23:27:06,019 - INFO - Starting training
+2024-12-27 23:27:07,519 - INFO - eval_loss: 7.77213191986084
+2024-12-27 23:27:07,519 - INFO - eval_runtime: 0.1719
+2024-12-27 23:27:07,519 - INFO - eval_samples_per_second: 5818.553
+2024-12-27 23:27:07,519 - INFO - eval_steps_per_second: 186.194
+2024-12-27 23:27:07,519 - INFO - epoch: 1.0
+2024-12-27 23:27:07,520 - INFO - Evaluation Metric - eval_loss: 7.77213191986084
+2024-12-27 23:27:07,520 - INFO - Evaluation Metric - eval_runtime: 0.1719
+2024-12-27 23:27:07,520 - INFO - Evaluation Metric - eval_samples_per_second: 5818.553
+2024-12-27 23:27:07,520 - INFO - Evaluation Metric - eval_steps_per_second: 186.194
+2024-12-27 23:27:07,520 - INFO - Evaluation Metric - epoch: 1.0
+2024-12-27 23:27:08,345 - INFO - eval_loss: 7.580286979675293
+2024-12-27 23:27:08,345 - INFO - eval_runtime: 0.1672
+2024-12-27 23:27:08,345 - INFO - eval_samples_per_second: 5979.622
+2024-12-27 23:27:08,345 - INFO - eval_steps_per_second: 191.348
+2024-12-27 23:27:08,345 - INFO - epoch: 2.0
+2024-12-27 23:27:08,346 - INFO - Evaluation Metric - eval_loss: 7.580286979675293
+2024-12-27 23:27:08,346 - INFO - Evaluation Metric - eval_runtime: 0.1672
+2024-12-27 23:27:08,346 - INFO - Evaluation Metric - eval_samples_per_second: 5979.622
+2024-12-27 23:27:08,346 - INFO - Evaluation Metric - eval_steps_per_second: 191.348
+2024-12-27 23:27:08,346 - INFO - Evaluation Metric - epoch: 2.0
+2024-12-27 23:27:08,347 - INFO - train_runtime: 1.7202
+2024-12-27 23:27:08,347 - INFO - train_samples_per_second: 1162.628
+2024-12-27 23:27:08,347 - INFO - train_steps_per_second: 2.325
+2024-12-27 23:27:08,347 - INFO - total_flos: 5318786880000.0
+2024-12-27 23:27:08,347 - INFO - train_loss: 6.731037139892578
+2024-12-27 23:27:08,347 - INFO - epoch: 2.0
+2024-12-27 23:27:08,348 - INFO - Training completed at epoch 2.0
+2024-12-27 23:27:08,348 - INFO - Final training loss: None
+2024-12-27 23:27:08,348 - INFO - Training complete. Saving model.

@@ -7,3 +7,4 @@ keys/*.json
 *.pyc
 *__pycache__*
 *model_folder*
+*.csv

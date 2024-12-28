@@ -1,0 +1,6 @@
+2024-12-27 22:27:46,717 - INFO - Starting experiment 2
+2024-12-27 22:27:46,717 - INFO - Experiment location: ./experiments/experiment_2
+2024-12-27 22:27:46,717 - INFO - Setting up the tokenizer
+2024-12-27 22:27:46,717 - INFO - Training new tokenizer
+2024-12-27 22:28:56,080 - INFO - Initializing the model
+2024-12-27 22:28:56,381 - INFO - Preparing datasets

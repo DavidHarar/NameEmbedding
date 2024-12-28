@@ -1,6 +1,5 @@
 import os
 import sys
-# import mlflow
 
 # os.chdir("/home/david/Desktop/projects/NameEmbedding")
 sys.path.append("/home/david/Desktop/projects/NameEmbedding")
